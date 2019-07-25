@@ -5,3 +5,10 @@
  */
 
 // You can delete this file if you're not using it
+function onClientEntry(){
+    console.log("We've started!")
+}
+
+export {
+    onClientEntry, 
+}
