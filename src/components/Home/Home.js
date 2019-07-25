@@ -24,6 +24,23 @@ const Home = () => (
                         // backgroundImage: `url(${logo})` 
                     }}
                 />
+                <Particles
+                    params={{
+                        particles: {
+                            line_linked: {
+                                shadow: {
+                                    enable: true,
+                                    color: "red",
+                                    blur: 1
+                                }
+                            }
+                        }
+                    }}
+                    style={{
+                        width: '100%',
+                        // backgroundImage: `url(${logo})` 
+                    }}
+                />
             </div>
         </Sidebar>
     </div>

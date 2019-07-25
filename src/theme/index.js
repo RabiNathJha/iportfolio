@@ -4,6 +4,7 @@ import { THEME } from './constants'
 
 import getBorder from './border';
 
+
 //material ui core
 import {
     AppBar,
@@ -40,11 +41,22 @@ import {
     Avatar,
 } from '@material-ui/core';
 
+//icons
 import {
     ChevronLeft as ChevronLeftIcon,
     ChevronRight as ChevronRightIcon,
+    MailOutline as MailOutlineIcon,
+    Call as CallIcon,
 } from '@material-ui/icons';
 
+import LogoLinkedin from 'react-ionicons/lib/LogoLinkedin';
+import LogoTwitter from 'react-ionicons/lib/LogoTwitter';
+import LogoInstagram from 'react-ionicons/lib/LogoInstagram';
+import LogoGithub from 'react-ionicons/lib/LogoGithub';
+import LogoFacebook from 'react-ionicons/lib/LogoFacebook';
+
+
+//style
 import {
     ThemeProvider,
     withStyles 
@@ -98,9 +110,17 @@ export {
     CssBaseline,
     Avatar,
 
-    //icons
+    //icons mui
     ChevronLeftIcon,
     ChevronRightIcon,
+    MailOutlineIcon,
+    CallIcon,
+    //icons ionicons
+    LogoLinkedin,
+    LogoTwitter,
+    LogoInstagram,
+    LogoGithub,
+    LogoFacebook,
 
     //style
     ThemeProvider,
