@@ -4,7 +4,6 @@ import { THEME } from './constants'
 
 import getBorder from './border';
 
-
 //material ui core
 import {
     AppBar,
@@ -39,7 +38,17 @@ import {
     SwipeableDrawer,
     CssBaseline,
     Avatar,
+
+    //transitions
+    Slide
+
 } from '@material-ui/core';
+
+//tansitions
+import {
+    Zoom
+} from 'react-reveal';
+
 
 //icons
 import {
@@ -124,5 +133,9 @@ export {
 
     //style
     ThemeProvider,
-    withStyles
+    withStyles,
+
+    //transitions
+    Slide,
+    Zoom
 };
