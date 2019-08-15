@@ -10,6 +10,9 @@ const styles = theme => ({
     setAsBackgroung: {
         position: 'absolute',
         zIndex: -1,
+        backgroundColor: 'black',
+        height: '100%',
+        width: '100%'
     },
     body: {
         color: 'red',
@@ -54,7 +57,12 @@ class Home extends Component {
 
                     <div className={classes.body}>
                         <ReactPageScroller animationTimer={600} containerWidth='200%' containerHeight={`${100-headerHeight}vh`} ref={c => this._pageScroller = c} pageOnChange={this.pageOnChange}>
-                            <div style={{backgroundColor: 'blue', height:'100vh'}}>Page1</div>
+                            <div>
+                                <div className={classes.setAsBackgroung}>
+                                    <Background />
+                                </div>
+                                Page1
+                            </div>
                             <div style={{backgroundColor: 'yellow', height:'100vh'}}>Page2</div>
                             <div style={{backgroundColor: 'green', height:'100vh'}}>Page3</div>
                         </ReactPageScroller>

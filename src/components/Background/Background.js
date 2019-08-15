@@ -4,29 +4,15 @@ import Particles from 'react-particles-js';
 const Background = (props) => {
     return(
         <Particles
-            params={{
-                particles: {
-                    line_linked: {
-                        shadow: {
-                            enable: true,
-                            color: "red",
-                            blur: 1
-                        }
-                    }
+        params={{
+            polygon: {
+                enable: true,
+                type: 'inside',
+                move: {
+                    radius: 10
                 },
-                "interactivity": {
-                    "events": {
-                        "onhover": {
-                            "enable": true,
-                            "mode": "repulse"
-                        }
-                    }
-                }
-            }}
-            style={{
-                width: '100%',
-                // backgroundImage: `url(${logo})` 
-            }}
+            }
+        }}
         />
     );
 };
