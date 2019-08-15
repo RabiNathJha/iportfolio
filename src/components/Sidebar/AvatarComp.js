@@ -10,13 +10,12 @@ import { rabiAvatar } from '../../static/images/avatar';
 
  const AvatarComp = (props) => {
     const {drawerOpen, margin, width, height} = props;
-    let decreaseFactor = drawerOpen ? 1 : 3.5;
 
     const style = {
         avatar:{
-            margin: margin/decreaseFactor,
-            width: width/decreaseFactor,
-            height: height/decreaseFactor,
+            margin,
+            width,
+            height
         }
     };
 
@@ -35,9 +34,9 @@ import { rabiAvatar } from '../../static/images/avatar';
 
  AvatarComp.defaultProps = {
     drawerOpen: true,
-    margin: 9,
-    width: 170,
-    height: 170,
+    margin: '9%',
+    width: '85%',
+    height: '85%',
  }
 
  export default AvatarComp;
