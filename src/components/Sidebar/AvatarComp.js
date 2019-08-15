@@ -35,9 +35,9 @@ import { rabiAvatar } from '../../static/images/avatar';
 
  AvatarComp.defaultProps = {
     drawerOpen: true,
-    margin: 8,
-    width: 160,
-    height: 160,
+    margin: 9,
+    width: 170,
+    height: 170,
  }
 
  export default AvatarComp;
