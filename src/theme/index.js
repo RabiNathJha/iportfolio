@@ -38,6 +38,7 @@ import {
     SwipeableDrawer,
     CssBaseline,
     Avatar,
+    Box,
 
     //transitions
     Slide
@@ -46,7 +47,10 @@ import {
 
 //tansitions
 import {
-    Zoom
+    Zoom,
+    Rotate,
+    Bounce,
+    Reveal
 } from 'react-reveal';
 
 
@@ -56,6 +60,7 @@ import {
     ChevronRight as ChevronRightIcon,
     MailOutline as MailOutlineIcon,
     Call as CallIcon,
+    ArrowForwardIos as ArrowForwardIosIcon
 } from '@material-ui/icons';
 
 import LogoLinkedin from 'react-ionicons/lib/LogoLinkedin';
@@ -118,12 +123,14 @@ export {
     SwipeableDrawer,
     CssBaseline,
     Avatar,
+    Box,
 
     //icons mui
     ChevronLeftIcon,
     ChevronRightIcon,
     MailOutlineIcon,
     CallIcon,
+    ArrowForwardIosIcon,
     //icons ionicons
     LogoLinkedin,
     LogoTwitter,
@@ -137,5 +144,8 @@ export {
 
     //transitions
     Slide,
-    Zoom
+    Zoom,
+    Rotate,
+    Bounce ,
+    Reveal
 };

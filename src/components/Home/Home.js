@@ -53,7 +53,7 @@ class Home extends Component {
 
                     <div>
                         <ReactPageScroller animationTimer={600} containerWidth='100%' containerHeight={`${100-headerHeight}vh`} ref={c => this._pageScroller = c} pageOnChange={this.pageOnChange}>
-                            <PageOne />
+                            <PageOne currentPage={currentPage} key={currentPage} />
                             <div style={{backgroundColor: 'yellow', height:'100vh'}}>Page2</div>
                             <div style={{backgroundColor: 'green', height:'100vh'}}>Page3</div>
                         </ReactPageScroller>

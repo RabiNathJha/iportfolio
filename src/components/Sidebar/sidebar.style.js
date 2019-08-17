@@ -17,7 +17,6 @@ export default (theme) => {
         width: drawerWidth,
         flexShrink: 0,
         whiteSpace: 'nowrap',
-        // background: 'linear-gradient(to right bottom, #430089, #82ffa1)'
     },
     drawerOpen: {
         width: drawerWidth,
@@ -25,7 +24,7 @@ export default (theme) => {
             easing: theme.transitions.easing.sharp,
             duration: theme.transitions.duration.enteringScreen,
         }),
-
+        background: 'linear-gradient(to right bottom, #eeeeee, #bdbdbd)'
     },
     drawerClose: {
         transition: theme.transitions.create('width', {
@@ -33,10 +32,8 @@ export default (theme) => {
             duration: theme.transitions.duration.leavihideDrawerIconngScreen,
         }),
         overflowX: 'hidden',
-        width: theme.spacing(7) + 1,
-        [theme.breakpoints.up('sm')]: {
-            width: theme.spacing(9) + 1,
-        },
+        width: theme.spacing(9) + 1,
+        background: 'linear-gradient(to right bottom, #eeeeee, #bdbdbd)'
 
     },
     toolbar: {

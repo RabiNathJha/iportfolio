@@ -33,7 +33,7 @@ const Sidebar = (props) => {
 
 
     const { classes, children, avatarName, avatarEmail, avatarCellNo } = props;
-    const [open, setOpen] = useState(true);
+    const [open, setOpen] = useState((window.innerWidth <= 1024) ? false: true);
 
     const toogleDrawerView = () => {
         setOpen(!open);
