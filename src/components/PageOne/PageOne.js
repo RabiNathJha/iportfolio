@@ -7,10 +7,21 @@ import { KnomeButton } from '../Buttons';
 const PageOne = (props) => {
 
     const { classes, name, profession } = props;
-    const [ hideKnomeButton, setKnomeButtonDisplay ] = useState(false);
+    const [ hideKnomeButton, setKnomeButtonDisplay ] = useState(true);
     const [ hideOtherButton, setOtherButtonDisplay ] = useState(false);
+    const [ timerCounter, setTimerCounter ] = useState(0);
 
-    // setTimeout(() => setKnomeButtonDisplay(false), 4000);
+    setTimeout(() => {
+        if(timerCounter === 0){
+            setKnomeButtonDisplay(false);
+            setTimerCounter(1);
+        }
+    }, 4000);
+
+    const onClickKnowMe = () => {
+        setKnomeButtonDisplay(!hideKnomeButton);
+        setOtherButtonDisplay(!hideOtherButton)
+    };
 
     return (
         <div className={classes.body}>
@@ -39,23 +50,39 @@ const PageOne = (props) => {
             </Bounce>
                 <div className={classes.viewMyWorkBtn}>
                     <Rotate delay={4400}>
-                        <KnomeButton showButton={hideKnomeButton} onClick={() => { setKnomeButtonDisplay(!hideKnomeButton);setOtherButtonDisplay(!hideOtherButton) }} />
+                        <KnomeButton
+                            showButton={hideKnomeButton}
+                            onClick={onClickKnowMe}
+                            name={'KNOME'}
+                        />
                     </Rotate>
                 </div>
                 <div>
                     <div className={classes.viewMyWorkBtn}>
                         <Rotate delay={0}>
-                            <KnomeButton showButton={!hideOtherButton} onClick={()=>({})} />
+                            <KnomeButton
+                                showButton={!hideOtherButton}
+                                onClick={()=>({})}
+                                name={'PROJECTS'}
+                            />
                         </Rotate>
                     </div>
                     <div className={classes.viewMyWorkBtn}>
                         <Rotate delay={0}>
-                            <KnomeButton showButton={!hideOtherButton} onClick={()=>({})} />
+                            <KnomeButton
+                                showButton={!hideOtherButton}
+                                onClick={()=>({})}
+                                name={'ABOUT'}
+                            />
                         </Rotate>
                     </div>
                     <div className={classes.viewMyWorkBtn}>
                         <Rotate delay={0}>
-                            <KnomeButton showButton={!hideOtherButton} onClick={()=>({})} />
+                            <KnomeButton
+                                showButton={!hideOtherButton}
+                                onClick={()=>({})}
+                                name={'BLOGS'}
+                            />
                         </Rotate>
                     </div>
                 </div>

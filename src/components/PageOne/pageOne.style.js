@@ -38,7 +38,7 @@ export const styles = theme => ({
     },
     viewMyWorkBtn: {
         width: '20%',
-        marginLeft: '40%',
+        marginLeft: '35%',
         // marginTop: '1%'
     }
 });
