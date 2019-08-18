@@ -1,15 +1,16 @@
 import React, {useState} from 'react';
-import { withStyles, Bounce, Typography, Box, Rotate, ArrowForwardIosIcon } from '../../theme';
+import { withStyles, Bounce, Typography, Box, Rotate } from '../../theme';
 import Typist from 'react-typist';
-import ParticleEffectButton from 'react-particle-effect-button';
 import { styles } from './pageOne.style';
+import { KnomeButton } from '../Buttons';
 
 const PageOne = (props) => {
 
-    const { classes } = props;
-    const [ showButton, setButtonDisplay ] = useState(true);
+    const { classes, name, profession } = props;
+    const [ hideKnomeButton, setKnomeButtonDisplay ] = useState(false);
+    const [ hideOtherButton, setOtherButtonDisplay ] = useState(false);
 
-    setTimeout(() => setButtonDisplay(false), 4000)
+    // setTimeout(() => setKnomeButtonDisplay(false), 4000);
 
     return (
         <div className={classes.body}>
@@ -26,39 +27,45 @@ const PageOne = (props) => {
                            <Typography className={classes.nameWrapperOne}>
                                <Box fontFamily='Caveat'>Hello, I'am &nbsp;</Box>
                                <Box fontFamily='Caveat' className={classes.name} textAlign='right'>
-                                    Rabinath Jha
+                                    {name}
                                 </Box>
                             </Typography>
                         </div>
                         <Typography className={classes.nameWrapperTwo}>
-                            <Box fontFamily='Caveat'>Trust me, I'm a software developer.</Box>
+                            <Box fontFamily='Caveat'>Trust me, I'm a {profession}.</Box>
                         </Typography>
                     </Typist>
                 </div>
             </Bounce>
-            <div className={classes.viewMyWorkBtn}>
-                <Rotate delay={4400}>
-                    <div onClick={() => setButtonDisplay(true)} >
-                        <ParticleEffectButton
-                            color='#121019'
-                            hidden={showButton}
-                            duration={1400}
-                            direction='left'
-                        >
-                            <button className={classes.button}>
-                                <span>
-                                    KNOME
-                                    <span style={{marginLeft:'8px'}}>
-                                        {[1,2,3].map((item) => <ArrowForwardIosIcon key={item} fontSize="small"/>)}
-                                        </span>
-                                    </span>
-                                </button>
-                        </ParticleEffectButton>
+                <div className={classes.viewMyWorkBtn}>
+                    <Rotate delay={4400}>
+                        <KnomeButton showButton={hideKnomeButton} onClick={() => { setKnomeButtonDisplay(!hideKnomeButton);setOtherButtonDisplay(!hideOtherButton) }} />
+                    </Rotate>
+                </div>
+                <div>
+                    <div className={classes.viewMyWorkBtn}>
+                        <Rotate delay={0}>
+                            <KnomeButton showButton={!hideOtherButton} onClick={()=>({})} />
+                        </Rotate>
                     </div>
-                </Rotate>
-            </div>
+                    <div className={classes.viewMyWorkBtn}>
+                        <Rotate delay={0}>
+                            <KnomeButton showButton={!hideOtherButton} onClick={()=>({})} />
+                        </Rotate>
+                    </div>
+                    <div className={classes.viewMyWorkBtn}>
+                        <Rotate delay={0}>
+                            <KnomeButton showButton={!hideOtherButton} onClick={()=>({})} />
+                        </Rotate>
+                    </div>
+                </div>
         </div>
     );
+};
+
+PageOne.defaultProps = {
+    name: 'Rabinath Jha',
+    profession: 'software developer'
 };
 
 export default withStyles(styles)(PageOne);
