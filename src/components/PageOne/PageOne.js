@@ -59,7 +59,7 @@ const PageOne = (props) => {
                 </div>
                 <div>
                     <div className={classes.viewMyWorkBtn}>
-                        <Rotate delay={0}>
+                        <Rotate>
                             <KnomeButton
                                 showButton={!hideOtherButton}
                                 onClick={()=>({})}
@@ -68,7 +68,7 @@ const PageOne = (props) => {
                         </Rotate>
                     </div>
                     <div className={classes.viewMyWorkBtn}>
-                        <Rotate delay={0}>
+                        <Rotate>
                             <KnomeButton
                                 showButton={!hideOtherButton}
                                 onClick={()=>({})}
@@ -77,7 +77,7 @@ const PageOne = (props) => {
                         </Rotate>
                     </div>
                     <div className={classes.viewMyWorkBtn}>
-                        <Rotate delay={0}>
+                        <Rotate>
                             <KnomeButton
                                 showButton={!hideOtherButton}
                                 onClick={()=>({})}
