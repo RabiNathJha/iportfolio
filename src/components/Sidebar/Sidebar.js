@@ -20,10 +20,18 @@ import {
  import { contactDetails } from './constants';
  import style from './sidebar.style';
 
+ const getWindowObj = () => {
+    if (typeof window !== `undefined`) {
+        return window
+      }
+    return ({});
+}
+
 const Sidebar = (props) => {
 
     const { classes, children, avatarName, avatarEmail, avatarCellNo } = props;
-    const [open, setOpen] = useState(window.innerWidth <= 1024 ? false: true);
+    const windowObj = getWindowObj();
+    const [open, setOpen] = useState(windowObj.innerWidth <= 1024 ? false: true);
 
     const toogleDrawerView = () => {
         setOpen(!open);

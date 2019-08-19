@@ -4,20 +4,7 @@ import { withStyles } from '../../theme';
 import Sidebar from '../Sidebar';
 import ReactPageScroller from "react-page-scroller";
 import IntroPage from '../IntroPage';
-
-// const styles = theme => ({
-//     setAsBackgroung: {
-//         position: 'absolute',
-//         zIndex: -1,
-//         backgroundColor: 'black',
-//         height: '100%',
-//         width: '100%'
-//     },
-//     body: {
-//         color: 'red',
-//         width: '50%'
-//     }
-// });
+import AboutPage from '../AboutPage';
 
 class Home extends Component {
 
@@ -51,8 +38,8 @@ class Home extends Component {
 
                     <div>
                         <ReactPageScroller animationTimer={600} containerWidth='100%' containerHeight={`${100-headerHeight}vh`} ref={c => this._pageScroller = c} pageOnChange={this.pageOnChange}>
-                            <IntroPage currentPage={currentPage} />
-                            <div style={{backgroundColor: 'yellow', height:'100vh'}}>Page2</div>
+                            <IntroPage />
+                            <AboutPage />
                             <div style={{backgroundColor: 'green', height:'100vh'}}>Page3</div>
                         </ReactPageScroller>
                     </div>

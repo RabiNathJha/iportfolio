@@ -39,6 +39,7 @@ import {
     CssBaseline,
     Avatar,
     Box,
+    useMediaQuery,
 
     //transitions
     Slide
@@ -74,7 +75,8 @@ import LogoFacebook from 'react-ionicons/lib/LogoFacebook';
 //style
 import {
     ThemeProvider,
-    withStyles 
+    withStyles ,
+    useTheme
 } from '@material-ui/styles';
 
 
@@ -125,6 +127,7 @@ export {
     CssBaseline,
     Avatar,
     Box,
+    useMediaQuery,
 
     //icons mui
     ChevronLeftIcon,
@@ -144,6 +147,7 @@ export {
     //style
     ThemeProvider,
     withStyles,
+    useTheme,
 
     //transitions
     Slide,
