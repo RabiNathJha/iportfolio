@@ -1,10 +1,10 @@
 import React, {useState} from 'react';
 import { withStyles, Bounce, Typography, Box, Rotate, ExpandMoreIcon } from '../../theme';
 import Typist from 'react-typist';
-import { styles } from './pageOne.style';
+import { styles } from './introPage.style';
 import { KnomeButton } from '../Buttons';
 
-const PageOne = (props) => {
+const IntroPage = (props) => {
 
     const { classes, name, profession } = props;
     const [ hideKnomeButton, setKnomeButtonDisplay ] = useState(true);
@@ -92,9 +92,9 @@ const PageOne = (props) => {
     );
 };
 
-PageOne.defaultProps = {
+IntroPage.defaultProps = {
     name: 'Rabinath Jha',
     profession: 'software developer'
 };
 
-export default withStyles(styles)(PageOne);
+export default withStyles(styles)(IntroPage);

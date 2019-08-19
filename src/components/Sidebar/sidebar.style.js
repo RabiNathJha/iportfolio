@@ -65,6 +65,17 @@ export default (theme) => {
         fontFamily: 'Courier New',
         marginBottom: theme.spacing(1)
     },
+    avatarZoom: {
+        margin: '0px',
+
+        '& :hover': {
+            transition: 'transform 1.5s',
+            '-ms-transform': 'scale(1.13)', /* IE 9 */
+            '-webkit-transform': 'scale(1.13)', /* Safari 3-8 */
+            'transform': 'scale(1.13)',
+        }
+    },
+
     avatarName: {
         fontWeight: theme.typography.fontWeightBold,
         fontSize: theme.spacing(3),

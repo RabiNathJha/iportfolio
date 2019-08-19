@@ -3,7 +3,7 @@ import React, {Component} from 'react';
 import { withStyles } from '../../theme';
 import Sidebar from '../Sidebar';
 import ReactPageScroller from "react-page-scroller";
-import PageOne from '../PageOne';
+import IntroPage from '../IntroPage';
 
 // const styles = theme => ({
 //     setAsBackgroung: {
@@ -51,7 +51,7 @@ class Home extends Component {
 
                     <div>
                         <ReactPageScroller animationTimer={600} containerWidth='100%' containerHeight={`${100-headerHeight}vh`} ref={c => this._pageScroller = c} pageOnChange={this.pageOnChange}>
-                            <PageOne currentPage={currentPage} />
+                            <IntroPage currentPage={currentPage} />
                             <div style={{backgroundColor: 'yellow', height:'100vh'}}>Page2</div>
                             <div style={{backgroundColor: 'green', height:'100vh'}}>Page3</div>
                         </ReactPageScroller>

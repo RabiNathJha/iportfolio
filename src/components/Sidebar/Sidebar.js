@@ -19,17 +19,8 @@ import {
  import AvatarComp from './AvatarComp';
  import { contactDetails } from './constants';
  import style from './sidebar.style';
- import { useSpring, animated } from 'react-spring';
 
 const Sidebar = (props) => {
-
-
-    //avatar animation functions and  varaibles
-    const calc = (x, y) => [-(y - window.innerHeight / 2) / 100, (x - window.innerWidth / 2) / 200  , 1.1]
-    const trans = (x, y, s) => `perspective(600px) rotateX(${x}deg) rotateY(${y}deg) scale(${s})`
-    
-    const [springProps, set] = useSpring(() => ({ xys: [0, 0, 1], config: { mass: 4, tension: 3500, friction: 60 } }))
-    //
 
     const { classes, children, avatarName, avatarEmail, avatarCellNo } = props;
     const [open, setOpen] = useState(window.innerWidth <= 1024 ? false: true);
@@ -57,16 +48,12 @@ const Sidebar = (props) => {
                     open={true}
                 >
                     <div className={classes.toolbar} onClick={toogleDrawerView}>
-                        <animated.div
-                            onMouseMove={({ clientX: x, clientY: y }) => set({ xys: calc(x, y) })}
-                            onMouseLeave={() => set({ xys: [0, 0, 1] })}
-                            style={{ transform: springProps.xys.interpolate(trans) }}
-                        >
+                        <div className={classes.avatarZoom}>
                             <AvatarComp
                                 drawerOpen={open}
                                 key={open}
                             />
-                        </animated.div>
+                        </div>
                         { open &&
                             <IconButton onClick={toogleDrawerView} className={classes.hideDrawerIcon}>
                                 <ChevronLeftIcon />
