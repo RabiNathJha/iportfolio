@@ -26,7 +26,7 @@ const Knome = ({showButton, classes, onClick, name}) => {
 };
 
 Knome.defaultProps = {
-    name: 'no name'
+    name: 'no name',
 }
 
 export default withStyles(styles)(Knome);

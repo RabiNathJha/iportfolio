@@ -31,9 +31,8 @@ const Sidebar = (props) => {
     const [springProps, set] = useSpring(() => ({ xys: [0, 0, 1], config: { mass: 4, tension: 3500, friction: 60 } }))
     //
 
-
     const { classes, children, avatarName, avatarEmail, avatarCellNo } = props;
-    const [open, setOpen] = useState((window.innerWidth <= 1024) ? false: true);
+    const [open, setOpen] = useState(window.innerWidth <= 1024 ? false: true);
 
     const toogleDrawerView = () => {
         setOpen(!open);

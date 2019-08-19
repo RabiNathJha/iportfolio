@@ -36,9 +36,24 @@ export const styles = theme => ({
         fontWeight: '400',
         fontSize: '32pt',
     },
-    viewMyWorkBtn: {
+    viewKnowMeBtn: {
         width: '20%',
         marginLeft: '35%',
         // marginTop: '1%'
+    },
+    hideKnowMebutton: {
+        visibility: 'hidden',
+        width:'0%',
+        // marginLeft: '15%',
+        height:'0%',
+        zIndex:'-2'
+    },
+    viewOthersBtn: {
+        marginTop: '-1%',
+        marginLeft: '35%',
+        marginBottom: '1%'
+    },
+    viewOthersBtnGroup: {
+        marginBottom: '6%',
     }
 });

@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import { withStyles, Bounce, Typography, Box, Rotate } from '../../theme';
+import { withStyles, Bounce, Typography, Box, Rotate, ExpandMoreIcon } from '../../theme';
 import Typist from 'react-typist';
 import { styles } from './pageOne.style';
 import { KnomeButton } from '../Buttons';
@@ -20,7 +20,10 @@ const PageOne = (props) => {
 
     const onClickKnowMe = () => {
         setKnomeButtonDisplay(!hideKnomeButton);
-        setOtherButtonDisplay(!hideOtherButton)
+        setTimeout(()=> {
+            setTimerCounter(2);
+            setOtherButtonDisplay(!hideOtherButton);
+        }, 1500)
     };
 
     return (
@@ -48,17 +51,15 @@ const PageOne = (props) => {
                     </Typist>
                 </div>
             </Bounce>
-                <div className={classes.viewMyWorkBtn}>
-                    <Rotate delay={4400}>
+                <div className={ timerCounter !==2 ? classes.viewKnowMeBtn: classes.hideKnowMebutton}>
                         <KnomeButton
                             showButton={hideKnomeButton}
                             onClick={onClickKnowMe}
                             name={'KNOME'}
                         />
-                    </Rotate>
                 </div>
-                <div>
-                    <div className={classes.viewMyWorkBtn}>
+                <div className={ timerCounter !==2 ? '': classes.viewOthersBtnGroup} >
+                    <div className={classes.viewOthersBtn}>
                         <Rotate>
                             <KnomeButton
                                 showButton={!hideOtherButton}
@@ -67,7 +68,7 @@ const PageOne = (props) => {
                             />
                         </Rotate>
                     </div>
-                    <div className={classes.viewMyWorkBtn}>
+                    <div className={classes.viewOthersBtn}>
                         <Rotate>
                             <KnomeButton
                                 showButton={!hideOtherButton}
@@ -76,7 +77,7 @@ const PageOne = (props) => {
                             />
                         </Rotate>
                     </div>
-                    <div className={classes.viewMyWorkBtn}>
+                    <div className={classes.viewOthersBtn}>
                         <Rotate>
                             <KnomeButton
                                 showButton={!hideOtherButton}
@@ -86,6 +87,7 @@ const PageOne = (props) => {
                         </Rotate>
                     </div>
                 </div>
+                
         </div>
     );
 };

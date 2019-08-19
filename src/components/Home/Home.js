@@ -1,9 +1,7 @@
 import React, {Component} from 'react';
 
-import { withStyles, Slide } from '../../theme';
-import Fade from 'react-reveal/Fade';
+import { withStyles } from '../../theme';
 import Sidebar from '../Sidebar';
-import Background from '../Background';
 import ReactPageScroller from "react-page-scroller";
 import PageOne from '../PageOne';
 
@@ -53,7 +51,7 @@ class Home extends Component {
 
                     <div>
                         <ReactPageScroller animationTimer={600} containerWidth='100%' containerHeight={`${100-headerHeight}vh`} ref={c => this._pageScroller = c} pageOnChange={this.pageOnChange}>
-                            <PageOne currentPage={currentPage} key={currentPage} />
+                            <PageOne currentPage={currentPage} />
                             <div style={{backgroundColor: 'yellow', height:'100vh'}}>Page2</div>
                             <div style={{backgroundColor: 'green', height:'100vh'}}>Page3</div>
                         </ReactPageScroller>

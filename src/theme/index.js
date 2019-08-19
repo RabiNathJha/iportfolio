@@ -60,7 +60,8 @@ import {
     ChevronRight as ChevronRightIcon,
     MailOutline as MailOutlineIcon,
     Call as CallIcon,
-    ArrowForwardIos as ArrowForwardIosIcon
+    ArrowForwardIos as ArrowForwardIosIcon,
+    ExpandMore as ExpandMoreIcon,
 } from '@material-ui/icons';
 
 import LogoLinkedin from 'react-ionicons/lib/LogoLinkedin';
@@ -131,6 +132,8 @@ export {
     MailOutlineIcon,
     CallIcon,
     ArrowForwardIosIcon,
+    ExpandMoreIcon,
+    
     //icons ionicons
     LogoLinkedin,
     LogoTwitter,
