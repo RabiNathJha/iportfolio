@@ -8,7 +8,7 @@
   iPortfolio
 </h1>
 
-Developing my portfolio website using REACT, GATSBY, MATERIAL UI, CSS-IN-JS
+Developing my portfolio website using <h3>REACT, GATSBY, MATERIAL UI, CSS-IN-JS</h3>
 
 _Have another more specific idea? You may want to check out our vibrant collection of [official and community-created starters](https://www.gatsbyjs.org/docs/gatsby-starters/)._
 
